@@ -42,7 +42,7 @@ export default function Hero({ onLaunchStudio, onOpenSelfHostModal, t, lang }) {
         </p>
 
         {/* Primary CTAs */}
-        <div style={{
+        <div className="hero-cta-group" style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -75,10 +75,10 @@ export default function Hero({ onLaunchStudio, onOpenSelfHostModal, t, lang }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: '24px',
+          gap: '20px',
           fontSize: '13px',
           color: 'var(--text-muted)',
-          marginBottom: '48px',
+          marginBottom: '44px',
           flexWrap: 'wrap'
         }}>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -111,7 +111,7 @@ export default function Hero({ onLaunchStudio, onOpenSelfHostModal, t, lang }) {
         </div>
 
         {/* Interactive Mode Preview Card */}
-        <div className="glass-panel" style={{
+        <div className="glass-panel hero-preview-card" style={{
           maxWidth: '1000px',
           margin: '0 auto',
           padding: '24px',
@@ -121,7 +121,7 @@ export default function Hero({ onLaunchStudio, onOpenSelfHostModal, t, lang }) {
         }}>
           {scheduleMode === 'agentic' ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', textAlign: 'left' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '14px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10b981' }} />
                   <span style={{ fontWeight: 600, fontSize: '14px', color: '#f1f5f9' }}>
@@ -139,7 +139,8 @@ export default function Hero({ onLaunchStudio, onOpenSelfHostModal, t, lang }) {
               </div>
 
               {/* Chat & Calendar Simulation */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '16px' }}>
+
                 {/* Agent Prompt Box */}
                 <div style={{
                   background: 'rgba(6, 9, 17, 0.7)',

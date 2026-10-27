@@ -283,7 +283,7 @@ export default function StudioApp({ onClose, t, lang = 'bn' }) {
       </div>
 
       {/* Main Studio Body */}
-      <div style={{ padding: '24px', flex: 1 }}>
+      <div className="studio-main-body" style={{ flex: 1 }}>
         {/* TAB 1: VISUAL CALENDAR */}
         {activeTab === 'calendar' && (
           <div>
@@ -442,9 +442,9 @@ export default function StudioApp({ onClose, t, lang = 'bn' }) {
 
         {/* TAB 2: AI COMPOSER */}
         {activeTab === 'composer' && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '24px' }}>
+          <div className="studio-composer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', gap: '20px' }}>
             {/* Left Column: Composer Controls */}
-            <div className="glass-panel" style={{ padding: '24px' }}>
+            <div className="glass-panel" style={{ padding: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Sparkles size={17} color="#c084fc" /> {t.composerTitle}

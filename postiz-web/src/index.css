@@ -522,15 +522,98 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .calendar-grid {
-    grid-template-columns: repeat(1, 1fr);
+/* Responsive Breakpoints & Touch Optimizations */
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none !important;
   }
-  .pricing-card.featured {
-    transform: none;
+  .desktop-only-btn {
+    display: none !important;
   }
-  .feature-grid {
-    grid-template-columns: 1fr;
+  .mobile-hamburger-btn {
+    display: inline-flex !important;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Typography responsive scaling */
+  h1 {
+    font-size: clamp(2rem, 8vw, 2.75rem) !important;
+  }
+  h2 {
+    font-size: clamp(1.65rem, 6vw, 2.2rem) !important;
+  }
+
+  /* Grid adjustments */
+  .calendar-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .pricing-card.featured {
+    transform: none !important;
+  }
+  .pricing-card.featured:hover {
+    transform: translateY(-4px) !important;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Studio responsive stacking */
+  .studio-composer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .tabs-header {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .tabs-header::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Touch-friendly buttons and chips */
+  .social-chip {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .stat-metric-card {
+    min-width: 100%;
+  }
+
+  /* Hero adjustments */
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-label-responsive {
+    display: none;
+  }
+  .navbar-studio-btn {
+    padding: 7px 10px !important;
+  }
+}
+

@@ -28,13 +28,13 @@ export default function SelfHostGuideModal({ isOpen, onClose, lang = 'bn' }) {
       <div style={{
         background: '#0a0f1d',
         border: '1px solid rgba(168, 85, 247, 0.3)',
-        borderRadius: '20px',
+        borderRadius: '16px',
         maxWidth: '680px',
         width: '100%',
-        maxHeight: '90vh',
+        maxHeight: '92vh',
         overflowY: 'auto',
         boxShadow: '0 25px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(139, 92, 246, 0.2)',
-        padding: '30px'
+        padding: 'clamp(18px, 4vw, 30px)'
       }}>
         {/* Modal Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
